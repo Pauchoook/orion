@@ -1,0 +1,21 @@
+.objects {
+  padding-bottom: 55px;
+  &__title {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  &__img {
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

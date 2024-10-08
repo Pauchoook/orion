@@ -1,0 +1,237 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  &__top {
+    background-color: var(--primary);
+    padding: 15px 0px;
+    @include laptop-middle {
+      display: none;
+    }
+  }
+  &__top-container {
+    @include flex-center;
+    gap: 60px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-middle {
+      gap: 15px;
+      flex-direction: column;
+      align-items: start;
+      color: var(--primary);
+      flex: 1;
+      padding: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 60px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-middle {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    a {
+      position: relative;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__wrapper-icon {
+    flex-shrink: 0;
+    @include laptop-middle {
+      @include flex-center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+  }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    @include laptop-middle {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 10px;
+  }
+  &__social-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: transform .2s ease;
+    @include hover {
+      transform: scale(1.1);
+    }
+    @include laptop-middle {
+      background-color: var(--primary);
+      border-radius: 50%;
+    }
+  }
+  &__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__bottom {
+    padding: 15px 0px;
+  }
+  &__container {
+    @include flex-between;
+    gap: 30px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 290px;
+    @include laptop {
+      width: 170px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__nav {
+    @include laptop-middle {
+      position: fixed;
+      overflow-y: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      max-width: 350px;
+      width: 100%;
+      background-color: white;
+      transform: translateX(-350px);
+      transition: transform .4s ease;
+      &.open {
+        transform: translateX(0px);
+      }
+    }
+  }
+  &__nav-wrapper {
+    position: relative;
+    @include laptop-middle {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: 100%;
+      padding: 20px 15px;
+    }
+  }
+  &__burger-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    display: none;
+    @include laptop-middle {
+      display: block;
+    }
+  }
+  &__burger-close-wrapper {
+    @include flex-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    span {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 25px;
+      background-color: var(--primary);
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__nav-list {
+    display: flex;
+    gap: 20px;
+    @include laptop-middle {
+      flex-direction: column;
+    }
+    a {
+      font-family: "MyriadPro";
+      position: relative;
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--gray);
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      @include laptop {
+        font-size: 20px;
+      }
+      @include laptop-middle {
+        font-size: 18px;
+      }
+      @include hover {
+        color: var(--primary);
+        &::before {
+          right: 0;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -6px;
+        left: 0;
+        right: 100%;
+        height: 3px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+  }
+  &__burger-btn {
+    width: 35px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    @include laptop-middle {
+      display: flex;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+    }
+  }
+}

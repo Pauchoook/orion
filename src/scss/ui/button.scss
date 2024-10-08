@@ -1,0 +1,28 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+.btn-primary {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 19px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease;
+  @include hover {
+    color: var(--primary);
+    background-color: transparent;
+  }
+  @include laptop {
+    padding: 15px;
+  }
+  @include laptop-middle {
+    font-size: 16px;
+  }
+}
