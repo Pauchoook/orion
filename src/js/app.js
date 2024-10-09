@@ -5,6 +5,7 @@ import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 import map from "./files/map.js";
 import anchor from "./files/anchor.js";
+import modal from "./files/modal.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -13,3 +14,4 @@ burger();
 sliders();
 map();
 anchor();
+modal();

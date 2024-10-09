@@ -1,7 +1,7 @@
 import { handleClose } from "./burger.js";
 
 export default function anchor() {
-  document.querySelector(".header__nav-list").querySelectorAll("a").forEach((link) => {
+  document.querySelectorAll(".anchor").forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 

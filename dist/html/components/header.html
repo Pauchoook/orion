@@ -56,26 +56,26 @@
 					</button>
 					<ul class="list header__nav-list">
 						<li>
-							<a href="#main">Главная</a>
+							<a href="#main" class="anchor">Главная</a>
 						</li>
 						<li>
-							<a href="#services">Наши услуги</a>
+							<a href="#services" class="anchor">Наши услуги</a>
 						</li>
 						<li>
-							<a href="#consultation">Гарантии</a>
+							<a href="#consultation" class="anchor">Гарантии</a>
 						</li>
 						<li>
-							<a href="#objects">Наши объекты</a>
+							<a href="#objects" class="anchor">Наши объекты</a>
 						</li>
 						<li>
-							<a href="#contacts">Контакты</a>
+							<a href="#contacts" class="anchor">Контакты</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<a href="#" target="_blank" data-da=".header__nav-wrapper,1109,2" class="btn btn-primary header__btn">
+			<button data-modal="connection" data-da=".header__nav-wrapper,1109,2" class="btn btn-modal btn-primary header__btn">
 				Заявка на клининг
-			</a>
+			</button>
 			<button class="btn header__burger-btn" id="burger-open">
 				<span></span>
 				<span></span>
@@ -84,3 +84,47 @@
 		</div>
 	</div>
 </header>
+<div data-modal="connection" class="modal">
+	<div class="modal__overlay">
+		<div class="modal__window">
+			<button class="btn modal__close">
+				<div class="modal__close-wrapper">
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<form action="#" class="form">
+				<label for="mark" class="form__item">
+					<input type="text" placeholder="Марка" id="mark" name="mark" class="form__input">
+				</label>
+				<label for="number-car" class="form__item">
+					<input type="text" placeholder="Номер авто" id="number-car" name="number-car" class="form__input">
+				</label>
+				<div class="form__item form__item--choice">
+					<input type="radio" id="cargo" name="type-car" class="form__radio" checked>
+					<label for="cargo" class="form__radio-label">грузовой</label>
+					<input type="radio" id="passenger" name="type-car" class="form__radio">
+					<label for="passenger" class="form__radio-label">легковой</label>
+				</div>
+				<label for="day" class="form__item">
+					<input type="text" placeholder="День" id="day" name="day" class="form__input">
+				</label>
+				<label for="month" class="form__item">
+					<input type="text" placeholder="Месяц" id="month" name="month" class="form__input">
+				</label>
+				<label for="time" class="form__item">
+					<input type="text" placeholder="Время" id="time" name="time" class="form__input">
+				</label>
+				<label for="tel" class="form__item form__item--full">
+					<input type="tel" placeholder="Номер телефона" id="tel" name="tel" class="form__input">
+				</label>
+				<label for="email" class="form__item form__item--full">
+					<input type="email" placeholder="Почта" id="email" name="email" class="form__input">
+				</label>
+				<label for="comment" class="form__item form__item--full">
+					<textarea placeholder="Дополнительная информация и комментарии" name="comment" id="comment" class="form__input form__input--comment"></textarea>
+				</label>
+			</form>
+		</div>
+	</div>
+</div>
